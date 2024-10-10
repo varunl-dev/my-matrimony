@@ -1,0 +1,241 @@
+.header {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0 5rem 1rem;
+  &__icon {
+    width: 2rem;
+    margin: 0 2.5rem 0 0;
+  }
+  &__title {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+}
+.profile-detail {
+  width: 80%;
+  margin: auto;
+  &__image-wrapper {
+    position: relative;
+    width: 80%;
+    margin: 1.25rem auto 3rem auto;
+  }
+  &__image-list {
+    width: 100%;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  &__scrollable-container {
+    display: flex;
+    gap: 10px;
+  }
+  &__profile-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 1rem;
+    cursor: pointer;
+  }
+  &__swipe-btn {
+    width: 1.5rem;
+    height: 2rem;
+    background: white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    &--right {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-top-left-radius: 0.3rem;
+      border-bottom-left-radius: 0.3rem;
+    }
+    &--left {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-top-right-radius: 0.3rem;
+      border-bottom-right-radius: 0.3rem;
+    }
+  }
+  &__card {
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 1rem;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    &__slider {
+      position: relative;
+      background: #fff;
+      width: 18rem;
+      height: 18rem;
+      border-radius: 1rem;
+    }
+    &__slider-image {
+      width: 100%;
+      height: 100%;
+      border-radius: 1rem;
+    }
+    &__counter {
+      position: absolute;
+      bottom: 8px;
+      right: 16px;
+      color: #fff;
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 5px;
+      border-radius: 5px;
+    }
+    &__dot-container {
+      text-align: center;
+      margin-top: 10px;
+      position: absolute;
+      bottom: -1rem;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &__dot {
+      cursor: pointer;
+      height: 0.6rem;
+      width: 0.6rem;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    &__content {
+      margin: 0 0 0 2rem;
+    }
+    &__tag {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-size: 0.8rem;
+      color: #063970;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+    &__tag-content {
+      margin: 0 0.5rem 0 0;
+      text-transform: capitalize;
+      display: flex;
+      align-items: center;
+    }
+    &__tag-icon {
+      width: 1rem;
+    }
+    &__desktop-view {
+        display: block;
+    }
+    &__mob-view {
+      display: none;
+    }
+    &__name {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 0 0.5rem 0;
+    }
+    &__misc-details {
+      font-size: 1rem;
+      font-weight: 300;
+      margin: 0 0 0.5rem 0;
+    }
+    &__actions {
+      margin: 1rem 0 0 0;
+    }
+    &__action-btn {
+      width: 5.5rem;
+      height: 2rem;
+      border-radius: 1rem;
+      border: 1px solid grey;
+      background: wheat;
+      margin: 0 1rem 0 0;
+      &--remove {
+        background: none;
+      }
+      &--match {
+        background: #e28743;
+        color: white;
+      }
+    }
+  }
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 0.5rem;
+  margin-top: -22px;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+
+.prev {
+  left: 0;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+.active {
+  background-color: #717171;
+}
+@media (max-width: 768px) {
+  .header {
+    margin: 1.5rem 1rem 2rem 1rem;
+    &__icon {
+      width: 1.5rem;
+      margin: 0 1rem 0 0;
+    }
+    &__title {
+      margin: 0;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+  }
+  .profile-detail {
+    width: 95%;
+    margin: 0 auto 5rem auto;
+    &__image-wrapper {
+      position: relative;
+      width: 95%;
+      margin: 1.25rem auto 3rem auto;
+    }
+    &__card {
+      width: 100%;
+      padding: 0;
+      flex-direction: column;
+      &__slider {
+        width: 100%;
+        border-radius: 1rem 1rem 0 0;
+      }
+      &__slider-image {
+        border-radius: 1rem 1rem 0 0;
+      }
+      &__content {
+        margin: 1.5rem 0 1rem 1rem;
+      }
+      &__desktop-view {
+        display: none;
+      }
+      &__mob-view {
+        display: block;
+      }
+    }
+  }
+}

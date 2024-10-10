@@ -1,0 +1,182 @@
+[
+  {
+    "name": "Anandhi",
+    "age": 27,
+    "height": "5 ft 5 in",
+    "motherTounge": "Tamil",
+    "caste": "Catholic",
+    "degree": "B.Ed",
+    "occupation": "Teacher",
+    "place": "Chennai",
+    "photo": "assets/profile-images/profile-1.jpg",
+   "photosCollection": [
+      "assets/person1/img1.jpg",
+      "assets/person1/img2.jpg",
+      "assets/person1/img3.jpg"
+    ],
+    "isVerifiedFlag": true,
+    "isPremiumFlag": true
+  },
+  {
+    "name": "Amala",
+    "age": 27,
+    "height": "5 ft 5 in",
+    "motherTounge": "Tamil",
+    "caste": "Brahmin",
+    "degree": "MBA",
+    "occupation": "HR",
+    "place": "Chennai",
+    "photo": "assets/profile-images/profile-2.jpg",
+    "photosCollection": [
+     "assets/person2/img1.jpg",
+      "assets/person2/img2.jpg",
+      "assets/person2/img3.jpg"
+    ],
+    "isVerifiedFlag": true,
+    "isPremiumFlag": true
+  },
+   {
+    "name": "Jessica",
+    "age": 27,
+    "height": "5 ft 5 in",
+    "motherTounge": "Tamil",
+    "caste": "Catholic",
+    "degree": "BE",
+    "occupation": "Engineer",
+    "place": "Chennai",
+    "photo": "assets/profile-images/profile-3.jpg",
+     "photosCollection": [
+      "assets/person3/img1.jpg",
+      "assets/person3/img2.jpg",
+      "assets/person3/img3.jpg"
+    ],
+    "isVerifiedFlag": true,
+    "isPremiumFlag": true
+  },
+  {
+    "name": "Sangeetha",
+    "age": 27,
+    "height": "5 ft 5 in",
+    "motherTounge": "Tamil",
+    "caste": "SC",
+    "degree": "BE",
+    "occupation": "Actor",
+    "place": "Chennai",
+    "photo": "assets/profile-images/profile-4.jpg",
+    "photosCollection": [
+      "assets/person4/img1.jpg",
+      "assets/person4/img2.jpg",
+      "assets/person4/img3.jpg"
+    ],
+    "isVerifiedFlag": true,
+    "isPremiumFlag": true
+  },
+  {
+    "name": "Priyanka",
+    "age": 27,
+    "height": "5 ft 5 in",
+    "motherTounge": "Tamil",
+    "caste": "MBC",
+    "degree": "MDS",
+    "occupation": "Dentist",
+    "place": "Chennai",
+    "photo": "assets/profile-images/profile-5.jpg",
+    "photosCollection": [
+      "assets/person5/img1.jpg",
+      "assets/person5/img2.jpg",
+      "assets/person5/img3.jpg"
+    ],
+    "isVerifiedFlag": true,
+    "isPremiumFlag": true
+  },
+  {
+    "name": "Aishwarya",
+    "age": 27,
+    "height": "5 ft 5 in",
+    "motherTounge": "Tamil",
+    "caste": "Brahmin",
+    "degree": "MBBS",
+    "occupation": "Doctor",
+    "place": "Chennai",
+    "photo": "assets/profile-images/profile-6.jpg",
+    "photosCollection": [
+     "assets/person6/img1.jpg",
+      "assets/person6/img2.jpg",
+      "assets/person6/img3.jpg"
+    ],
+    "isVerifiedFlag": true,
+    "isPremiumFlag": true
+  },
+  {
+    "name": "Jennifer",
+    "age": 27,
+    "height": "5 ft 5 in",
+    "motherTounge": "Tamil",
+    "caste": "Catholic",
+    "degree": "MBBS",
+    "occupation": "Doctor",
+    "place": "Chennai",
+    "photo": "assets/profile-images/profile-7.jpg",
+    "photosCollection": [
+      "assets/person7/img1.jpg",
+      "assets/person7/img2.jpg",
+      "assets/person7/img3.jpg"
+    ],
+    "isVerifiedFlag": true,
+    "isPremiumFlag": true
+  },
+   {
+    "name": "Pragati",
+    "age": 27,
+    "height": "5 ft 5 in",
+    "motherTounge": "Tamil",
+    "caste": "Nair",
+    "degree": "MDS",
+    "occupation": "Dentist",
+    "place": "Kerala",
+    "photo": "assets/profile-images/profile-8.jpg",
+     "photosCollection": [
+      "assets/person8/img1.jpg",
+      "assets/person8/img2.jpg",
+      "assets/person8/img3.jpg"
+    ],
+    "isVerifiedFlag": true,
+    "isPremiumFlag": true
+  },
+  {
+    "name": "Soundharya",
+    "age": 28,
+    "height": "5 ft 9 in",
+    "motherTounge": "Telugu",
+    "caste": "Catholic",
+    "degree": "B.E",
+    "occupation": "Engineer",
+    "place": "Aruku",
+    "photo": "assets/profile-images/profile-9.jpg",
+    "photosCollection": [
+      "assets/person9/img1.jpg",
+      "assets/person9/img2.jpg",
+      "assets/person9/img3.jpg"
+    ],
+    "isVerifiedFlag": false,
+    "isPremiumFlag": true
+  },
+  {
+    "name": "Ayesha",
+    "age": 26,
+    "height": "5 ft 4 in",
+    "motherTounge": "Urdu",
+    "caste": "Muslim",
+    "degree": "B.Com",
+    "occupation": "MLA",
+    "place": "Hyderabad",
+    "photo": "assets/profile-images/profile-10.jpg",
+    "photosCollection": [
+      "assets/person10/img1.jpg",
+      "assets/person10/img2.jpg",
+      "assets/person10/img3.jpg"
+    ],
+    "isVerifiedFlag": true,
+    "isPremiumFlag": false
+  }
+]

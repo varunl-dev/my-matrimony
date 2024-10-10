@@ -1,0 +1,149 @@
+<header class="header">
+  <img
+    (click)="goToHomepage()"
+    src="assets/icons/back_arrow.png"
+    alt="back arrow"
+    class="header__icon"
+  />
+  <h1 class="header__title">{{ title }}</h1>
+</header>
+
+<div class="profile-detail">
+  <div class="profile-detail__image-wrapper">
+    <button
+      (click)="scrollLeft()"
+      class="profile-detail__swipe-btn profile-detail__swipe-btn--left"
+    >
+      &#10094;
+    </button>
+    <div class="profile-detail__image-list" #scrollContainer>
+      <div class="profile-detail__scrollable-container">
+        <img
+          *ngFor="let profile of profiles; let i = index"
+          [src]="profile.photo"
+          alt="{{ profile.name }}"
+          class="profile-detail__profile-image"
+          (click)="selectProfile(i)"
+        />
+      </div>
+    </div>
+    <button
+      (click)="scrollRight()"
+      class="profile-detail__swipe-btn profile-detail__swipe-btn--right"
+    >
+      &#10095;
+    </button>
+  </div>
+
+  <mat-card class="profile-detail__card">
+    <div class="profile-detail__card__slider">
+      <img
+        [src]="selectedProfile?.photosCollection[currentImageIndex]"
+        alt="Slider Image"
+        class="profile-detail__card__slider-image"
+      />
+      <div class="profile-detail__card__counter">
+        {{ currentImageIndex + 1 }}/{{
+          selectedProfile?.photosCollection?.length
+        }}
+      </div>
+      <button class="prev" (click)="prevImage()">&#10094;</button>
+      <button class="next" (click)="nextImage()">&#10095;</button>
+      <div class="profile-detail__card__dot-container">
+        <span
+          *ngFor="let image of selectedProfile?.photosCollection; let i = index"
+          class="profile-detail__card__dot"
+          [ngClass]="{ active: currentImageIndex === i }"
+          (click)="goToImage(i)"
+        ></span>
+      </div>
+    </div>
+    <div class="profile-detail__card__content">
+      <div
+        class="profile-detail__card__tag"
+        *ngIf="
+          selectedProfile?.isVerifiedFlag || selectedProfile?.isPremiumFlag
+        "
+      >
+        <p
+          class="profile-detail__card__tag-content"
+          *ngIf="selectedProfile?.isVerifiedFlag"
+        >
+          <img
+            class="profile-detail__card__tag-icon"
+            src="assets/icons/verified.png"
+            alt=" verified icon"
+          />
+          verfied member
+        </p>
+        <p
+          class="profile-detail__card__tag-content"
+          *ngIf="selectedProfile?.isPremiumFlag"
+        >
+          <img
+            class="profile-detail__card__tag-icon"
+            src="assets/icons/premium.png"
+            alt=" premium icon"
+          />
+          premium member
+        </p>
+      </div>
+
+      <div class="profile-detail__card__desktop-view">
+        <p class="profile-detail__card__name">{{ selectedProfile?.name }}</p>
+        <p class="profile-detail__card__misc-details">
+          {{ selectedProfile?.age }}
+        </p>
+        <p class="profile-detail__card__misc-details">
+          {{ selectedProfile?.height }}
+        </p>
+        <p class="profile-detail__card__misc-details">
+          {{ selectedProfile?.motherTounge }}
+        </p>
+        <p class="profile-detail__card__misc-details">
+          {{ selectedProfile?.caste }}
+        </p>
+        <p class="profile-detail__card__misc-details">
+          {{ selectedProfile?.degree }}
+        </p>
+        <p class="profile-detail__card__misc-details">
+          {{ selectedProfile?.occupation }}
+        </p>
+        <p class="profile-detail__card__misc-details">
+          {{ selectedProfile?.place }}
+        </p>
+      </div>
+
+      <div class="profile-detail__card__mob-view">
+        <p class="profile-detail__card__name">{{ selectedProfile?.name }}</p>
+        <p class="profile-detail__card__misc-details">
+          {{ selectedProfile?.age }}, {{ selectedProfile?.height }},
+          {{ selectedProfile?.motherTounge }}, {{ selectedProfile?.caste }},
+          {{ selectedProfile?.degree }}, {{ selectedProfile?.occupation }},
+          {{ selectedProfile?.place }}
+        </p>
+      </div>
+
+      <div class="profile-detail__card__actions">
+        <button
+          (click)="shortlisted()"
+          class="profile-detail__card__action-btn"
+        >
+          Shortlisted
+        </button>
+        <button
+          (click)="notIntrested()"
+          class="profile-detail__card__action-btn profile-detail__card__action-btn--remove"
+        >
+          Remove
+        </button>
+        <button
+          (click)="intrested()"
+          class="profile-detail__card__action-btn profile-detail__card__action-btn--match"
+        >
+          Match
+        </button>
+      </div>
+    </div>
+  </mat-card>
+</div>

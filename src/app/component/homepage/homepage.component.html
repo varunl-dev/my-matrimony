@@ -1,0 +1,115 @@
+<div class="homepage">
+  <h1 class="homepage__system-heading">Matrimony Site</h1>
+  <h1 class="homepage__mob-heading">Matrimony App</h1>
+  <mat-card class="homepage__card">
+    <div class="header">
+      <header>
+        <h1 class="header__heading">My Matches</h1>
+        <h3 class="header__heading__sub-heading">5 Profiles pending with me</h3>
+      </header>
+      <button (click)="goToProfileDetail(0, 'My Matches')" class="header__btn">
+        see all
+        <img
+          class="header__btn__icon"
+          src="assets/icons/chevron_right.png"
+          alt="right icon"
+          aria-label="chevron_right icon"
+        />
+      </button>
+    </div>
+
+    <div class="content">
+      <button
+        (click)="scrollDailyMatchLeft()"
+        class="content__swipe-btn content__swipe-btn--left"
+      >
+        &#10094;
+      </button>
+      <div class="content__container" #scrollDailyMatchContainer>
+        <mat-card
+          class="content__container__img-card"
+          *ngFor="let profile of profiles; let i = index"
+          (click)="goToProfileDetail(i, 'My Matches')"
+        >
+          <img
+            class="content__container__profile-pic"
+            [src]="profile.photo"
+            alt="profile pic"
+          />
+          <mat-card-content class="content__container__details">
+            <p class="content__container__user-name">{{ profile.name }}</p>
+            <p class="content__container__user-misc">
+              {{ profile.age }}, {{ profile.height }},
+              {{ profile.motherTounge }}, {{ profile.caste }},
+              {{ profile.degree }}, {{ profile.occupation }},
+              {{ profile.place }}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <button
+        (click)="scrollDailyMatchRight()"
+        class="content__swipe-btn content__swipe-btn--right"
+      >
+        &#10095;
+      </button>
+    </div>
+  </mat-card>
+
+  <mat-card class="homepage__card">
+    <div class="header">
+      <header>
+        <h1 class="header__heading">Daily Recommendation</h1>
+      </header>
+      <button
+        (click)="goToProfileDetail(0, 'Daily Recommendation')"
+        class="header__btn"
+      >
+        see all
+        <img
+          class="header__btn__icon"
+          src="assets/icons/chevron_right.png"
+          alt="right icon"
+          aria-label="chevron_right icon"
+        />
+      </button>
+    </div>
+
+    <div class="content">
+      <button
+        (click)="scrollRecommendationLeft()"
+        class="content__swipe-btn content__swipe-btn--left"
+      >
+        &#10094;
+      </button>
+      <div class="content__container" #scrollRecommendationContainer>
+        <mat-card
+          class="content__container__img-card"
+          *ngFor="let profile of profiles; let i = index"
+          (click)="goToProfileDetail(i, 'Daily Recommendation')"
+        >
+          <img
+            class="content__container__profile-pic"
+            [src]="profile.photo"
+            alt="profile pic"
+          />
+          <mat-card-content class="content__container__details">
+            <p class="content__container__user-name">{{ profile.name }}</p>
+            <p class="content__container__user-misc">
+              {{ profile.age }}, {{ profile.height }},
+              {{ profile.motherTounge }}, {{ profile.caste }},
+              {{ profile.degree }}, {{ profile.occupation }},
+              {{ profile.place }}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+      <button
+        (click)="scrollRecommendationRight()"
+        class="content__swipe-btn content__swipe-btn--right"
+      >
+        &#10095;
+      </button>
+    </div>
+  </mat-card>
+</div>

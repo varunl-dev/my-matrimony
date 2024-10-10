@@ -1,0 +1,150 @@
+.homepage {
+  padding: 3rem 3rem 5rem 3rem;
+  &__system-heading {
+    display: block;
+    margin: 0;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  &__mob-heading {
+    display: none;
+  }
+
+  &__card {
+    border-radius: 1rem;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+    margin: 3rem;
+  }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  &__heading {
+    margin: 0;
+    font-size: 1.5rem;
+    &__sub-heading {
+      margin: 0.5rem 0 0 0;
+      font-size: 1rem;
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #8b1a10;
+    height: 2rem;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    &__icon {
+      height: 1.5rem;
+    }
+  }
+}
+.content {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 1rem 0 0 0;
+  padding: 0 0 1rem 0;
+  &__swipe-btn {
+    width: 1.5rem;
+    height: 2rem;
+    background: white;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    &--left {
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-top-right-radius: 0.3rem;
+      border-bottom-right-radius: 0.3rem;
+    }
+    &--right {
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-top-left-radius: 0.3rem;
+      border-bottom-left-radius: 0.3rem;
+    }
+  }
+  &__container {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    width: 100%;
+    padding: 0 0 0.5rem 0;
+    &__img-card {
+      flex: 0 0 auto;
+      width: 150px;
+      margin: 0 10px;
+      padding: 0 0 1rem 0;
+      border-radius: 1rem;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    &__profile-pic {
+      height: 150px;
+      border-top-left-radius: 1rem;
+      border-top-right-radius: 1rem;
+    }
+    &__details {
+      margin: 0;
+      padding: 1rem 0.4rem 0 1rem;
+    }
+    &__user-name {
+      margin: 0 0 0.3rem 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+    &__user-misc {
+      margin: 0 0 0 0;
+      font-size: 0.8rem;
+      font-weight: 300;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .homepage {
+    padding: 1.5rem 1.5rem 3rem 1.5rem;
+    &__system-heading {
+      display: none;
+    }
+    &__mob-heading {
+      display: block;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin: 0 0 2rem 0;
+      text-align: center;
+    }
+    &__heading {
+      font-size: 1.5rem;
+      margin: 0 0 2rem 0;
+    }
+
+    &__card {
+      border-radius: 1rem;
+      box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 1rem 0;
+      margin: 0 0 3rem 0;
+    }
+  }
+  .header {
+    &__heading {
+      font-size: 1rem;
+      &__sub-heading {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
